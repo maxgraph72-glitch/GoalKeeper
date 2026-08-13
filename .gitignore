@@ -1,0 +1,22 @@
+node_modules/
+dist/
+coverage/
+*.local
+*.log
+
+# Tauri / Rust
+src-tauri/target/
+src-tauri/gen/schemas/
+
+# Local application data
+*.db
+*.db-shm
+*.db-wal
+backups/
+logs/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
