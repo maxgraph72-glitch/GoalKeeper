@@ -35,3 +35,15 @@ jobs:
 
       - name: Build frontend
         run: npm run build
+  rust:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Check formatting
+        run: cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
+
+      - name: Check Rust
+        run: cargo check --manifest-path src-tauri/Cargo.toml
